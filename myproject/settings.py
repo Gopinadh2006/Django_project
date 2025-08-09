@@ -67,7 +67,7 @@ NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd" # replace with the actual path 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Optional: where you can store custom templates
+        'DIRS': [BASE_DIR / 'templates'],  # Add this if you have global templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -165,4 +165,5 @@ EMAIL_HOST_USER= 'v.gopinadh751811@gmail.com'
 EMAIIL_HOST_PASSWORD = 'aibi bqel etfj rquz'
 
 DEFAULT_FROM_EMAIL= EMAIL_HOST_USER
+
 
