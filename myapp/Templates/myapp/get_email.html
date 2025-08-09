@@ -1,0 +1,16 @@
+<form method="POST">
+  {% csrf_token %}
+  <label>Email:</label>
+  <input type="email" name="email" required>
+  <button type="submit">Send OTP</button>
+</form>
+
+
+<div class="bg-blue-100 p-4 rounded-md shadow-md">
+  <h2 class="text-xl font-bold text-blue-800">Enter your email</h2>
+  <form method="POST" class="space-y-2">
+    {% csrf_token %}
+    <input type="email" name="email" required class="border p-2 rounded w-full" placeholder="you@example.com">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send OTP</button>
+  </form>
+</div>
