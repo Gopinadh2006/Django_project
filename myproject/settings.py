@@ -60,7 +60,8 @@ ROOT_URLCONF = 'myproject.urls'
 import os
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd" # replace with the actual path to npm
 
@@ -165,5 +166,6 @@ EMAIL_HOST_USER= 'v.gopinadh751811@gmail.com'
 EMAIIL_HOST_PASSWORD = 'aibi bqel etfj rquz'
 
 DEFAULT_FROM_EMAIL= EMAIL_HOST_USER
+
 
 
