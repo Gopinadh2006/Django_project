@@ -11,14 +11,14 @@ def login_view(request):
     return render(request, 'myapp/login.html')
 
 def home_view(request):
-    return render(request, 'myapp/templates/myapp/home.html') 
+    return render(request, 'myapp/home.html') 
 
 def logout_view(request):
     logout(request)
     return redirect('login')
 
 def home(request):
-    return render(request, 'myapp/templates/myapp/home.html')
+    return render(request, 'myapp/home.html')
     
 
 def get_email_view(request):
@@ -46,6 +46,7 @@ def verify_otp_view(request):
             messages.error(request, 'Invalid OTP. Please try again.')
 
     return render(request, 'myapp/verify_otp.html')
+
 
 
 
