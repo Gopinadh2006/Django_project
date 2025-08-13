@@ -51,10 +51,11 @@ from django.template import TemplateDoesNotExist, loader
 
 def home_view(request):
     try:
-        template = loader.get_template('home.html')
+        myapp = loader.get_template('home.html')
         return render(request, 'home.html')
     except TemplateDoesNotExist:
         return HttpResponse("❌ home.html not found in templates.")
+
 
 
 
