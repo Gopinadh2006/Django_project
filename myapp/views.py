@@ -46,6 +46,16 @@ def verify_otp_view(request):
             messages.error(request, 'Invalid OTP. Please try again.')
 
     return render(request, 'myapp/verify_otp.html')
+from django.shortcuts import render, HttpResponse
+from django.template import TemplateDoesNotExist, loader
+
+def home_view(request):
+    try:
+        template = loader.get_template('home.html')
+        return render(request, 'home.html')
+    except TemplateDoesNotExist:
+        return HttpResponse("❌ home.html not found in templates.")
+
 
 
 
