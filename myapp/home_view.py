@@ -3,5 +3,6 @@ from django.shortcuts import render, redirect
 
 @login_required
 def home_view(request):
-    return render(request, 'myapp/home.html')
+    return render(request, 'home.html')
+
 
