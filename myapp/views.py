@@ -11,14 +11,14 @@ def login_view(request):
     return render(request, 'myapp/login.html')
 
 def home_view(request):
-    return render(request, 'myapp/home.html') 
+    return render(request, 'home.html') 
 
 def logout_view(request):
     logout(request)
     return redirect('login')
 
 def home(request):
-    return render(request, 'myapp/home.html')
+    return render(request, 'home.html')
     
 
 def get_email_view(request):
@@ -55,6 +55,7 @@ def home_view(request):
         return render(request, 'home.html')
     except TemplateDoesNotExist:
         return HttpResponse("❌ home.html not found in templates.")
+
 
 
 
